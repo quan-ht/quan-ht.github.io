@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>类图</title>
+    <link href="/posts/4c12bdb7/"/>
+    <url>/posts/4c12bdb7/</url>
+    
+    <content type="html"><![CDATA[<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><h2 id="类图结构"><a href="#类图结构" class="headerlink" title="类图结构"></a>类图结构</h2><ol><li>类名</li><li>属性</li><li>方法</li></ol><p><img src="/../img/%E7%B1%BB%E5%9B%BE/d1a655f3.jpeg"></p><h2 id="可见性符号"><a href="#可见性符号" class="headerlink" title="可见性符号"></a>可见性符号</h2><ol><li><code>+</code> 表示 public</li><li><code>-</code> 表示 private</li><li><code>#</code> 表示 protected</li><li><code>~</code> 表示 package&#x2F;default</li></ol><pre><code class=" mermaid">classDiagram    class Employee&#123;        -name: string        -employeeId: int        -phone: string        -department: string        +updatePhone() void    &#125;</code></pre><pre><code class=" mermaid">zenuml    try &#123;      Consumer-&gt;API: Book something      API-&gt;BookingService: Start booking process    &#125; catch &#123;      API-&gt;Consumer: show failure    &#125; finally &#123;      API-&gt;BookingService: rollback status    &#125;</code></pre><h2 id="类图的关系"><a href="#类图的关系" class="headerlink" title="类图的关系"></a>类图的关系</h2><ol><li>泛化关系（Generalization）</li><li>实现关系（Implementation）</li><li>关联关系（Association）</li><li>聚合关系（Aggregation）</li><li>组合关系（Composition）</li><li>依赖关系（Dependency）</li><li>继承关系（Inheritance）</li><li>依赖关系（Dependency）</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>UML</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>类图</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>登录时序图</title>
+    <link href="/posts/bfc03aca/"/>
+    <url>/posts/bfc03aca/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/../img/%E7%99%BB%E5%BD%95%E6%97%B6%E5%BA%8F%E5%9B%BE/070bcd28.png"></p><pre><code class=" mermaid">sequenceDiagram    actor 用户    participant 前台    participant cookie    participant 服务    participant redis    participant mysql    用户 -&gt;&gt; 前台: 访问后台管理页面    activate 前台    前台 -&gt;&gt; cookie: 判断是否已登录    activate cookie    alt 已登录        cookie --&gt;&gt; 前台: true        前台 -&gt;&gt; 用户: 跳转后台管理页面        else 未登录            cookie --&gt;&gt; 前台: false            deactivate cookie            前台 -&gt;&gt; 用户: 跳转登录页面            前台 -&gt;&gt; 服务: 请求验证码            activate 服务            服务 -&gt;&gt; 服务: 生成验证码            服务 -&gt;&gt; redis: 验证码存入redis            activate redis            服务 --&gt;&gt; 前台: 返回验证码            deactivate 服务        end    用户 -&gt;&gt; 前台: 输入账号、密码、验证码    前台 -&gt;&gt; 服务: 调用登录接口    activate 服务    服务 -&gt;&gt; redis: 获取验证码    redis --&gt;&gt; 服务: 返回验证码    deactivate redis    服务 -&gt;&gt; 服务: 校验验证码    alt 验证码错误        服务 --&gt;&gt; 前台: 返回验证码错误        前台 -&gt;&gt; 用户: 提示验证码错误        else 验证码正确            服务 -&gt;&gt; mysql: 获取用户信息            activate mysql            mysql --&gt;&gt; 服务: 返回用户信息            deactivate mysql            服务 -&gt;&gt; 服务: 登录校验            alt 用户信息错误                服务 --&gt;&gt; 前台: 返回用户信息错误                前台 -&gt;&gt; 用户: 提示用户信息错误                else 用户信息正确                    服务 -&gt;&gt; 服务: 登录成功，生成token                    服务 --&gt;&gt; 前台: 返回token                    前台 -&gt;&gt; cookie: 存入cookie                    activate cookie                    deactivate cookie                    前台 -&gt;&gt; 用户: 跳转后台管理页面                    end        end    deactivate 服务    deactivate 前台</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>UML</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>时序图</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Shiro实现记住我功能</title>
     <link href="/posts/4e2b99f6/"/>
     <url>/posts/4e2b99f6/</url>
@@ -25,62 +75,6 @@
       <tag>Shiro</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>全新的一篇文章</title>
-    <link href="/posts/b9b770b2/"/>
-    <url>/posts/b9b770b2/</url>
-    
-    <content type="html"><![CDATA[<p>这又是一篇测试文章</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Sports</category>
-      
-      <category>Baseball</category>
-      
-      <category>MLB</category>
-      
-      <category>American League</category>
-      
-      <category>Boston Red Sox</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>foo</tag>
-      
-      <tag>bar</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>My First Blog</title>
-    <link href="/posts/8a2ade14/"/>
-    <url>/posts/8a2ade14/</url>
-    
-    <content type="html"><![CDATA[<p>这是一段简介</p><p>这是我的第一篇博客</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>前端</category>
-      
-      <category>HTML</category>
-      
-    </categories>
-    
     
   </entry>
   
