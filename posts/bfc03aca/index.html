@@ -19,20 +19,19 @@
   <meta name="author" content="Quanht">
   <meta name="keywords" content="Blog, Hexo, JavaScript, Vue.js, CSS, HTML, Rails, Java, Spring, Git, GitHub, Docker, Kubernetes, Linux">
   
-    <meta name="description" content="sequenceDiagram     actor 用户     participant 前台     participant cookie     participant 服务     participant redis     participant mysql     用户 -&gt;&gt; 前台: 访问后台管理页面     activate 前台     前台 -&gt;&gt; co">
+    <meta name="description" content="sequenceDiagram     actor 用户     participant 前台     participant cookie     participant 服务     participant redis     participant mysql     用户 -&gt;&gt; 前台: 访问后台管理页面     activate 前台     前台 -&gt;&gt; coo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="登录时序图">
 <meta property="og:url" content="https://quanht.top/posts/bfc03aca/">
 <meta property="og:site_name" content="Quanht">
-<meta property="og:description" content="sequenceDiagram     actor 用户     participant 前台     participant cookie     participant 服务     participant redis     participant mysql     用户 -&gt;&gt; 前台: 访问后台管理页面     activate 前台     前台 -&gt;&gt; co">
+<meta property="og:description" content="sequenceDiagram     actor 用户     participant 前台     participant cookie     participant 服务     participant redis     participant mysql     用户 -&gt;&gt; 前台: 访问后台管理页面     activate 前台     前台 -&gt;&gt; coo">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://quanht.top/img/%E7%99%BB%E5%BD%95%E6%97%B6%E5%BA%8F%E5%9B%BE/070bcd28.png">
 <meta property="article:published_time" content="2024-10-09T13:59:58.000Z">
-<meta property="article:modified_time" content="2024-10-10T16:02:21.489Z">
+<meta property="article:modified_time" content="2024-10-11T14:24:17.750Z">
 <meta property="article:author" content="Quanht">
 <meta property="article:tag" content="时序图">
+<meta property="article:tag" content="登录">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://quanht.top/img/%E7%99%BB%E5%BD%95%E6%97%B6%E5%BA%8F%E5%9B%BE/070bcd28.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -292,17 +291,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="UML"
-        id="heading-083e182451abdda274fcec6c96b573e4" role="tab" data-toggle="collapse" href="#collapse-083e182451abdda274fcec6c96b573e4"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="润悦"
+        id="heading-0a7fac6a6d49886b3f8b3aea59e7fca9" role="tab" data-toggle="collapse" href="#collapse-0a7fac6a6d49886b3f8b3aea59e7fca9"
         aria-expanded="true"
       >
-        UML
-        <span class="list-group-count">(2)</span>
+        润悦
+        <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-083e182451abdda274fcec6c96b573e4"
-           role="tabpanel" aria-labelledby="heading-083e182451abdda274fcec6c96b573e4">
+      <div class="category-collapse collapse show" id="collapse-0a7fac6a6d49886b3f8b3aea59e7fca9"
+           role="tabpanel" aria-labelledby="heading-0a7fac6a6d49886b3f8b3aea59e7fca9">
         
         
           
@@ -315,15 +314,6 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">登录时序图</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/4c12bdb7/" title="类图"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">类图</span>
         </a>
       
     
@@ -350,7 +340,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年10月11日 凌晨
+                    本文最后更新于 2024年10月11日 晚上
                   
                 
               </p>
@@ -358,8 +348,7 @@
             
               <div class="markdown-body">
                 
-                <p><img src="/../img/%E7%99%BB%E5%BD%95%E6%97%B6%E5%BA%8F%E5%9B%BE/070bcd28.png" srcset="/img/loading.gif" lazyload></p>
-<pre><code class=" mermaid">sequenceDiagram
+                <pre><code class=" mermaid">sequenceDiagram
     actor 用户
     participant 前台
     participant cookie
@@ -384,7 +373,7 @@
             activate redis
             服务 --&gt;&gt; 前台: 返回验证码
             deactivate 服务
-        end
+        	end
     用户 -&gt;&gt; 前台: 输入账号、密码、验证码
     前台 -&gt;&gt; 服务: 调用登录接口
     activate 服务
@@ -434,7 +423,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/UML/" class="category-chain-item">UML</a>
+  <a href="/categories/%E6%B6%A6%E6%82%A6/" class="category-chain-item">润悦</a>
   
   
 
@@ -450,6 +439,8 @@
       <i class="iconfont icon-tags"></i>
       
         <a href="/tags/%E6%97%B6%E5%BA%8F%E5%9B%BE/" class="print-no-link">#时序图</a>
+      
+        <a href="/tags/%E7%99%BB%E5%BD%95/" class="print-no-link">#登录</a>
       
     </div>
   
@@ -505,12 +496,6 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/posts/4c12bdb7/" title="类图">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">类图</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
